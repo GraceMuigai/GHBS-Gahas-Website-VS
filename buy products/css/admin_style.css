@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital@0;1&family=Lato:ital@0;1&family=Roboto:ital,wght@0,400;1,500&display=swap'); 
+
+:root{
+    --gray:#566573;
+    --light-coral:#fcb5b5;
+    --dark-color:#4e413e;
+    --black:#131212;
+    --dark-blue: #1e476b;
+    --border: .1rem solid rgba(236, 188, 188);
+    --border-hover:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(236, 188, 188);
+    --bg: rgb(246, 242, 242);
+}
+
+*{
+    font-family: 'Andika', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear; 
+}
+*{
+    font-family: 'Lato', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;  
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection{
+    color: var(--light-coral);
+    background-color: var(--dark-blue);
+}
+
+html{
+    font-size: 70.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+
+}
+
+html::-webkit-scrollbar-track{
+    background: #566573;
+    
+}
+
+html::-webkit-scrollbar-thumb{
+   background: #fcb5b5;
+    
+}
+
+body{
+    background-color: rgb(246, 242, 242);
+}
+
+section{
+    padding: 2rem;
+}
+
+.btn,
+.delete-btn,
+.option-btn{
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: azure;
+    padding: 1rem 3rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.btn{
+    background: #131212;
+}
+
+.delete-btn{
+    background: rgb(143, 17, 17);
+}
+
+.option-btn{
+    background: rgb(139, 136, 47);
+}
+
+.flex-btn{
+    display: flex;
+    gap: 1rem;
+}
+
+.message{
+    position: sticky;
+    top: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--bg);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.message span{
+    font-size: 2rem;
+    color: black;
+}
+
+.message i{
+    font-size: 2.5rem;
+    color: orangered;
+    cursor: pointer;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+}
+
+.message i:hover{
+    color: var(--gray);
+}
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover{
+    background: var(--dark-color);
+}
+
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.form-container form{
+    background: whitesmoke;
+    border-radius: 0.5rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    text-align: center;
+    width: 50rem;
+    margin: 2rem;
+}
+
+.form-container form h3{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: var(--black);
+    text-align: center;
+}
+
+.form-container form p{
+    margin: 1rem 0;
+    font-size: 2rem;
+    color: #566573;
+}
+
+.form-container form p span{
+    color: #e75c5c;
+    text-transform: none;
+}
+
+.form-container form .box{
+    width: 100%;
+    background: rgb(228, 222, 222);
+    padding: 1.4rem;
+    font-size: 1.4rem;
+    color: #131212;
+    margin: 1rem 0;
+    border: var(--border);
+    border-radius: 0.5rem;
+    text-transform: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */ 
+@media (max-width: 991px){
+    
+    html{
+        font-size: 65.5%;
+    }
+}
+
+
+
+@media (max-width: 450px){
+    
+    html{
+        font-size: 50%;
+    }
+
+    .flex-btn{
+        flex-flow: column;
+        gap: 0;
+    }
+}
