@@ -1,30 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin_header</title>
-
-    
-    <!--swipper css link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-
-    <!--font awesome cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
-    <!--font google-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Andika:ital@0;1&family=Lato:ital@0;1&family=Roboto:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
-
-    <!-- custom css file -->
-    <link rel="stylesheet" href="../css/admin_style.css">
-    
-
-
-</head>
-<body>
+<?php 
+if(isset($message)){
+    foreach($message as $message){
+        echo '
+        <div class="message">
+            <span>'.$message.'</span>
+            <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+        </div>
+        ';
+    }
+}
+?>
 
 <header class="header">
 
@@ -53,10 +38,10 @@
                 $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
             ?>
             <P><?= $fetch_profile['name']; ?></P> <!--problem-->
-            <a href="update_profile.php" class="btn">update profile</a>
+            <a href="../admin/update_profile.php" class="btn">update profile</a>
             <div class="flex-btn">
-                <a href="admin_login.php" class="option-btn">login</a>
-                <a href="register_admin.php" class="option-btn">register</a>
+                <a href="../admin/admin_login.php" class="option-btn">login</a>
+                <a href="../admin/register_admin.php" class="option-btn">register</a>
             </div>
             <a href="../components/admin_logout.php" class="delete-btn">logout</a>
         </div>
@@ -65,6 +50,3 @@
 
     
 </header>
-
-</body>
-</html>
