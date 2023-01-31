@@ -229,7 +229,10 @@ section{
 }
 
 .header .flex .icons > *{
-
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--light-coral);
+    margin-left: 1.7rem;
 }
 
 
