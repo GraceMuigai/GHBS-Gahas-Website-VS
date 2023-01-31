@@ -219,7 +219,7 @@ section{
 
 .header .flex .navbar a{
     margin: 0 1rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: var(--black);
 }
 
@@ -228,11 +228,33 @@ section{
     text-decoration: solid;
 }
 
-.header .flex .icons > *{
+.header .flex .icons div{
     font-size: 2rem;
     cursor: pointer;
     color: var(--light-coral);
     margin-left: 1.7rem;
+}
+
+.header .flex .icons div:hover{
+    color: var(--light-coral);
+}
+
+.header .flex .profile{
+    position: absolute;
+    top: 120%; right: 2rem;
+    background: rgb(228, 222, 222);
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    border-radius: .5rem;
+    padding: 2rem;
+    padding-top: 1rem;
+}
+
+.header .flex .profile p{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--black);
 }
 
 
@@ -271,7 +293,7 @@ section{
 @media (max-width: 991px){
     
     html{
-        font-size: 65.5%;
+        font-size: 60%;
     }
 }
 

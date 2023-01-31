@@ -1,14 +1,14 @@
 <?php 
-if(isset($message)){
-    foreach($message as $message){
-        echo '
-        <div class="message">
-            <span>'.$message.'</span>
-            <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
-        </div>
-        ';
+    if(isset($message)){
+        foreach($message as $message){
+            echo '
+            <div class="message">
+                <span>'.$message.'</span>
+                <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+            </div>
+            ';
+        }
     }
-}
 ?>
 
 <header class="header">
@@ -20,8 +20,8 @@ if(isset($message)){
             <a href="../admin/dashboard.php">home</a>
             <a href="../admin/products.php">products</a>
             <a href="../admin/placed_orders.php">orders</a>
-            <a href="../admin/admin_accounts.php">admin accounts</a>
-            <a href="../admin/users_accounts.php">users accounts</a>
+            <a href="../admin/admin_accounts.php">admin_accounts</a>
+            <a href="../admin/user_accounts.php">user_accounts</a>
             <a href="../admin/messages.php">messages</a>
             <a href="../../book_form.php">Bookings</a>
         </nav>
