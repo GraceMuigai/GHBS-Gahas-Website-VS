@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `admins` (
   `id` int(255) NOT NULL,
   `name` varchar(20) NOT NULL,
-  `password` varchar(25) NOT NULL
+  `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -47,7 +47,7 @@ INSERT INTO `admins` (`id`, `name`, `password`) VALUES
 --
 
 CREATE TABLE `cart` (
-  `id` int(11) NOT NULL,
+  `id` int(100) NOT NULL,
   `user_id` int(100) NOT NULL,
   `pid` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -93,7 +93,7 @@ CREATE TABLE `messages` (
 --
 
 CREATE TABLE `orders` (
-  `id` int(11) NOT NULL,
+  `id` int(100) NOT NULL,
   `user_id` int(100) NOT NULL,
   `name` varchar(20) NOT NULL,
   `number` varchar(10) NOT NULL,
@@ -146,6 +146,12 @@ ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `favourites`
 --
 ALTER TABLE `favourites`
@@ -184,6 +190,42 @@ ALTER TABLE `users`
 --
 ALTER TABLE `admins`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `wishlist`
+--
+ALTER TABLE `favourites`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
