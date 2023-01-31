@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admins` (
-  `id` int(255) NOT NULL,
+  `id` int(100) NOT NULL,
   `name` varchar(20) NOT NULL,
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -63,7 +63,7 @@ CREATE TABLE `cart` (
 --
 
 CREATE TABLE `favourites` (
-  `id` int(255) NOT NULL,
+  `id` int(100) NOT NULL,
   `user_id` int(100) NOT NULL,
   `pid` int(100) NOT NULL,
   `name` int(100) NOT NULL,
@@ -78,7 +78,7 @@ CREATE TABLE `favourites` (
 --
 
 CREATE TABLE `messages` (
-  `id` int(255) NOT NULL,
+  `id` int(100) NOT NULL,
   `user_id` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE `orders` (
 --
 
 CREATE TABLE `products` (
-  `id` int(255) NOT NULL,
+  `id` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
   `details` varchar(500) NOT NULL,
   `price` int(10) NOT NULL,
@@ -129,7 +129,7 @@ CREATE TABLE `products` (
 --
 
 CREATE TABLE `users` (
-  `id` int(255) NOT NULL,
+  `id` int(100) NOT NULL,
   `name` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
@@ -189,7 +189,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `cart`
@@ -201,13 +201,13 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `favourites`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -219,13 +219,13 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
