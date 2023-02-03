@@ -20,8 +20,8 @@
             <a href="../admin/dashboard.php">home</a>
             <a href="../admin/products.php">products</a>
             <a href="../admin/placed_orders.php">orders</a>
-            <a href="../admin/admin_accounts.php">admin_accounts</a>
-            <a href="../admin/user_accounts.php">user_accounts</a>
+            <a href="../admin/admin_accounts.php">admin</a>
+            <a href="../admin/user_accounts.php">user</a>
             <a href="../admin/messages.php">messages</a>
             <a href="../../book_form.php">Bookings</a>
         </nav>
@@ -33,7 +33,7 @@
 
         <div class="profile"> <!--problem-->
             <?php 
-                $select_profile = $conn->prepare("SELECT * FROM 'admins' WHERE id = ?"); 
+                $select_profile = $conn->prepare("SELECT * FROM `admins` WHERE id = ?"); 
                 $select_profile->execute([$admin_id]);
                 $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
             ?>

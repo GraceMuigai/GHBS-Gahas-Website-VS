@@ -49,8 +49,38 @@ if(!isset($admin_id)){
     <div class="box">
         <h3>welcome</h3>
         <p><?= $fetch_profile['name']; ?></p>
-        <a href="update_profile.php">update profile</a>
+        <a href="update_profile.php" class="btn">update profile</a>
     </div>
+
+    <div class="box">
+        <?php
+            $total_pendings = 0;
+            $select_pendings = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ?");
+            $select_pendings->execute(['pending']);
+            while($fetch_pendings = $select_pendings->fetch(PDO::FETCH_ASSOC)){
+                $total_pendings += $fetch_pendings['total_price'];
+            }
+        ?>
+        <h3><span>ksh</span><?= $total_pendings; ?><span>/=</span></h3>
+        <p>total pendings</p>
+        <a href="placed_orders.php" class="btn">see orders</a>
+    </div>
+
+    <div class="box">
+        <?php
+            $total_completes = 0;
+            $select_completes = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ?");
+            $select_completes->execute(['completed']);
+            while($fetch_completes = $select_completes->fetch(PDO::FETCH_ASSOC)){
+                $total_completes += $fetch_completes['total_price'];
+            }
+        ?>
+        <h3><span>ksh</span><?= $total_completes; ?><span>/=</span></h3>
+        <p>total completes</p>
+        <a href="placed_orders.php" class="btn">see orders</a>
+    </div>
+
+    <div class="box"></div>
 
 </section>
 
