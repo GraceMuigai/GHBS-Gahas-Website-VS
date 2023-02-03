@@ -41,7 +41,20 @@ if(!isset($admin_id)){
 <body>
 
 <?php include '../components/admin_header.php'; ?>
-    
+
+<!--admin dashboard section starts-->
+
+<section class="dashboard">
+
+    <div class="box">
+        <h3>welcome</h3>
+        <p><?= $fetch_profile['name']; ?></p>
+        <a href="update_profile.php">update profile</a>
+    </div>
+
+</section>
+
+<!--admin dashboard section ends-->
 
 
 
