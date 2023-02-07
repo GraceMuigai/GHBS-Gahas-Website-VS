@@ -146,7 +146,7 @@ if(!isset($admin_id)){
             ?>
             <h3><?= $numbers_of_bookings; ?></h3>
             <p>bookings</p>
-            <a href="../../GHBS Gahas Website VS/book_form.php" class="btn">see bookings</a>
+            <a href="../../book_form.php" class="btn">see bookings</a>
         </div>
 
     </div>
