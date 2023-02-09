@@ -19,7 +19,7 @@ if(!isset($_POST['submit'])){
     $update_name->execute([$name, $admin_id]);
 
     $empty_password = 'empty0';
-    $select_old_password = $conn->prepare("SELECT password FROM `admins`WHERE id = ?");
+    $select_old_password = $conn->prepare("SELECT password FROM `admins` WHERE id = ?");
     $select_old_password->execute([$admin_id]);
     $fetch_prev_password = $select_old_password->fetch(PDO::FETCH_ASSOC);
     echo $prev_password = $fetch_prev_password['password'];
