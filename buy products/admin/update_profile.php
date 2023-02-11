@@ -10,7 +10,7 @@ if(!isset($admin_id)){
     header('location:admin_login.php');
 }
 
-if(!isset($_POST['submit'])){
+if(isset($_POST['submit'])){
 
     $name = $_POST['name'];
     $name = filter_var($name, FILTER_SANITIZE_STRING);
@@ -18,11 +18,33 @@ if(!isset($_POST['submit'])){
     $update_name = $conn->prepare("UPDATE `admins` SET name = ? WHERE id = ?");
     $update_name->execute([$name, $admin_id]);
 
-    $empty_password = 'empty0';
+    $empty_password = '';
     $select_old_password = $conn->prepare("SELECT password FROM `admins` WHERE id = ?");
     $select_old_password->execute([$admin_id]);
     $fetch_prev_password = $select_old_password->fetch(PDO::FETCH_ASSOC);
-    echo $prev_password = $fetch_prev_password['password'];
+    $prev_password = $fetch_prev_password['password'];
+    $old_password = $_POST['old_password'];
+    $old_password = filter_var($old_password, FILTER_SANITIZE_STRING);
+    $new_password = $_POST['new_password'];
+    $new_password = filter_var($new_password, FILTER_SANITIZE_STRING);
+    $confirm_password = $_POST['confirm_password'];
+    $confirm_password = filter_var($confirm_password, FILTER_SANITIZE_STRING);
+
+    if($old_password == $empty_password){
+        $message[] = 'please enter old password!';
+    }elseif($old_password != $prev_password){
+        $message[] = 'old password not matched!';
+    }elseif($new_password != $confirm_password){
+        $message[] = 'confirm password not matched!';
+    }else{
+        if($new_password !=$empty_password){
+            $update_password = $conn->prepare("UPDATE `admins` SET password = ? WHERE id = ?");
+            $update_password->execute([$confirm_password, $admin_id]);
+            $message[] = 'password updated successfully!';
+        }else{
+            $message[] = 'please enter the new password!';
+        }
+    }
 }
 
 ?>
@@ -62,6 +84,7 @@ if(!isset($_POST['submit'])){
         <section class="form-container">
             <form action="" method="post">
                 <h3>update profile</h3>
+                <input type="hidden" name="prev_password" value="<?= $fetch_profile['password']; ?>">
                 <input type="text" name="name" maxlength="20" required placeholder="enter your username" class="box" oninput="this.value= this.value.replace(/\s/g, '')" value="<?= $fetch_profile['name']; ?>">
                 <input type="password" name="old_password" maxlength="20" placeholder="enter your old password" class="box" oninput="this.value= this.value.replace(/\s/g, '')">
                 <input type="password" name="new_password" maxlength="20" placeholder="enter your new password" class="box" oninput="this.value= this.value.replace(/\s/g, '')">
