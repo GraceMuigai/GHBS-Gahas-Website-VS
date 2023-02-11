@@ -317,6 +317,29 @@ section{
     color: black;
 }
 
+.add-products form{
+    margin: 0 auto;
+    max-width: 70rem;
+    background: ghostwhite;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+}
+
+.add-products form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.add-products form .flex .inputBox{
+    flex: 1 1 40rem;
+}
+
+.add-products form .flex .inputBox .box{
+    width: 100%;
+}
 
 
 
