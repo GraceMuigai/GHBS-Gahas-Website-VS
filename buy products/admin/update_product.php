@@ -40,6 +40,8 @@ if(!isset($admin_id)){
 </head>
 <body>
 
+<?php include '../components/admin_header.php' ?>
+
 
 
 
