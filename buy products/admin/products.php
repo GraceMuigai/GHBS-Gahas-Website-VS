@@ -97,7 +97,7 @@ if(isset($_POST['add_product'])){
 
     <h1 class="heading">add product</h1>
     
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form action="" method="post" enctype="multipart/form-data">
         <div class="flex">
             <div class="inputBox">
                 <span>product name (required)</span>
