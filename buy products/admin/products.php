@@ -23,19 +23,19 @@ if(isset($_POST['add_product'])){
     $image_01 = filter_var($image_01, FILTER_SANITIZE_STRING);
     $image_01_size = $_FILES['image_01']['size'];
     $image_01_tmp_name = $_FILES['image_01']['tmp_name'];
-    $image_01_folder = '../uploaded_img/'.$image_01;
+    $image_01_folder = '../hair_products_img/'.$image_01;
 
     $image_02 = $_FILES['image_02']['name'];
     $image_02 = filter_var($image_02, FILTER_SANITIZE_STRING);
     $image_02_size = $_FILES['image_02']['size'];
     $image_02_tmp_name = $_FILES['image_02']['tmp_name'];
-    $image_02_folder = '../uploaded_img/'.$image_02;
+    $image_02_folder = '../hair_products_img/'.$image_02;
 
     $image_03 = $_FILES['image_03']['name'];
     $image_03 = filter_var($image_03, FILTER_SANITIZE_STRING);
     $image_03_size = $_FILES['image_03']['size'];
     $image_03_tmp_name = $_FILES['image_03']['tmp_name'];
-    $image_03_folder = '../uploaded_img/'.$image_03;
+    $image_03_folder = '../hair_products_img/'.$image_03;
 
     $select_products = $conn->prepare("SELECT * FROM `products` WHERE name = ?");
     $select_products->execute([$name]);
@@ -57,6 +57,22 @@ if(isset($_POST['add_product'])){
             $message[] = 'new product added!';
         }
     }
+}
+
+if(isset($_GET['delete'])){
+
+    $delete_id = $_GET['delete'];
+    $delete_product_image = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
+    $delete_product_image->execute([$delete_id]);
+    $fetch_delete_image = $delete_product_image->fetch(PDO::FETCH_ASSOC);
+    unlink('../hair_products_img/'.$fetch_delete_image['image_01']);
+    unlink('../hair_products_img/'.$fetch_delete_image['image_02']);
+    unlink('../hair_products_img/'.$fetch_delete_image['image_03']);
+    $delete_product = $conn->prepare("DELETE FROM `products` WHERE id = ?");
+    $delete_product->execute([$delete_id]);
+    $delete_favourites = $conn->prepare("DELETE FROM `favourites` WHERE pid = ?");
+    $delete_favourites->execute([$delete_id]);
+    header('location:products.php');
 }
 
 ?>

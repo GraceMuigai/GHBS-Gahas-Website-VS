@@ -444,6 +444,7 @@ section{
 
 
 
+
 /* media queries */ 
 @media (max-width: 991px){
     
@@ -499,5 +500,9 @@ section{
     
     .dashboard .box-container{
         grid-template-columns: auto auto;
+    }
+
+    .show-products .box-container{
+        grid-template-columns: 1fr;
     }
 }
