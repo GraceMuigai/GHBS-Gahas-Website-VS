@@ -427,14 +427,14 @@ section{
     object-fit: contain;
 }
 
-.update-product form .image-container .sub-image{
+.update-product form .image-container .sub-images{
     display: flex;
     gap: 1.5rem;
     margin: 1rem 0;
     justify-content: center;
 }
 
-.update-product form .image-container .sub-image img{
+.update-product form .image-container .sub-images img{
     height: 6rem;
     width: 8rem;
     object-fit: contain;
@@ -445,7 +445,7 @@ section{
     transition: .2s linear;
 }
 
-.update-product form .image-container .sub-image img:hover{
+.update-product form .image-container .sub-images img:hover{
     transform: scale(1.1);
 }
 
@@ -463,6 +463,11 @@ section{
 .update-product form textarea{
     height: 15rem;
     resize: none;
+}
+
+.update-product form span{
+    font-size: 1.7rem;
+    color: black;
 }
 
 
