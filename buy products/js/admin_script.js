@@ -17,7 +17,7 @@ window.onscroll = () =>{
     navbar.classList.remove('active');
 }
 
-subImages = document.querySelector('.update-product .image-container .sub-images img');
+subImages = document.querySelectorAll('.update-product .image-container .sub-images img');
 mainImage = document.querySelector('.update-product .image-container .main-image img');
 
 subImages.forEach(images =>{

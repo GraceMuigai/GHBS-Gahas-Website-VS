@@ -150,6 +150,7 @@ if(isset($_GET['delete'])){
 <!-- show products section starts -->
 
 <section class="show-products">
+    <h1 class="heading">Added Products</h1>
 
     <div class="box-container">
 
