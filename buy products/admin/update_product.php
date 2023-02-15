@@ -30,7 +30,7 @@ if(isset($_POST['update'])){
     $image_01 = $_FILES['image_01']['name'];
     $image_01 = filter_var($image_01, FILTER_SANITIZE_STRING);
     $image_01_size = $_FILES['image_01']['size'];
-    $image_tmp_name_01 = $_FILES['image_01']['tmp_name'];
+    $image_01_tmp_name = $_FILES['image_01']['tmp_name'];
     $image_01_folder = '../hair_products_img/'.$image_01;
 
     if(!empty($image_01)){
@@ -39,7 +39,7 @@ if(isset($_POST['update'])){
         }else{
             $update_image_01 = $conn->prepare("UPDATE `products` SET image_01 = ? WHERE id = ?");
             $update_image_01->execute([$image_01, $pid]);
-            move_uploaded_file($image_tmp_name_01, $image_01_folder);
+            move_uploaded_file($image_01_tmp_name, $image_01_folder);
             unlink('../hair_products_img/'.$old_image_01);
             $message[] = 'image 01 updated!';
         }
@@ -49,7 +49,7 @@ if(isset($_POST['update'])){
     $image_02 = $_FILES['image_02']['name'];
     $image_02 = filter_var($image_02, FILTER_SANITIZE_STRING);
     $image_02_size = $_FILES['image_02']['size'];
-    $image_tmp_name_02 = $_FILES['image_02']['tmp_name'];
+    $image_02_tmp_name = $_FILES['image_02']['tmp_name'];
     $image_02_folder = '../hair_products_img/'.$image_02;
 
     if(!empty($image_02)){
@@ -58,7 +58,7 @@ if(isset($_POST['update'])){
         }else{
             $update_image_02 = $conn->prepare("UPDATE `products` SET image_02 = ? WHERE id = ?");
             $update_image_02->execute([$image_02, $pid]);
-            move_uploaded_file($image_tmp_name_02, $image_02_folder);
+            move_uploaded_file($image_02_tmp_name, $image_02_folder);
             unlink('../hair_products_img/'.$old_image_02);
             $message[] = 'image 02 updated!';
         }
@@ -68,7 +68,7 @@ if(isset($_POST['update'])){
     $image_03 = $_FILES['image_03']['name'];
     $image_03 = filter_var($image_03, FILTER_SANITIZE_STRING);
     $image_03_size = $_FILES['image_03']['size'];
-    $image_tmp_name_03 = $_FILES['image_03']['tmp_name'];
+    $image_03_tmp_name = $_FILES['image_03']['tmp_name'];
     $image_03_folder = '../hair_products_img/'.$image_03;
 
     if(!empty($image_03)){
@@ -77,7 +77,7 @@ if(isset($_POST['update'])){
         }else{
             $update_image_03 = $conn->prepare("UPDATE `products` SET image_03 = ? WHERE id = ?");
             $update_image_03->execute([$image_03, $pid]);
-            move_uploaded_file($image_tmp_name_03, $image_03_folder);
+            move_uploaded_file($image_03_tmp_name, $image_03_folder);
             unlink('../hair_products_img/'.$old_image_03);
             $message[] = 'image 03 updated!';
         }
