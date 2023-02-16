@@ -2,13 +2,7 @@
 
 include '../components/connect.php';
 
-session_start(); 
-
-$admin_id = $_SESSION['admin_id'];
-
-if(!isset($admin_id)){
-    header('location:admin_login.php');
-}
+if(isset($_SESSION['user_id']))
 
 ?>
 
@@ -18,7 +12,7 @@ if(!isset($admin_id)){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>products</title>
+    <title>messages</title>
 
     
     <!--swipper css link -->
@@ -33,8 +27,6 @@ if(!isset($admin_id)){
     <link href="https://fonts.googleapis.com/css2?family=Andika:ital@0;1&family=Lato:ital@0;1&family=Roboto:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
 
     <!-- custom css file -->
-    <link rel="stylesheet" href="../css/admin_style.css">
-
     <link rel="stylesheet" href="../css/product_style.css">
     
 
@@ -42,40 +34,10 @@ if(!isset($admin_id)){
 </head>
 <body>
 
-<?php include '../components/admin_header.php' ?>
-
-<!-- add products section starts -->
-
-<section class="add-products">
-    <form action="" method="POST" enctype="multipart/form-data">
-        <div class="flex">
-            <div class="inputBox">
-                <span>product name (required)</span>
-            </div>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-            <a href="update_product.php"></a>
-            <img src="../hair_products_img/" alt="">
-            <a href="../../book_form.php"></a>
-            <a href="../components/connect.php"></a>
-        </div>
-    </form>
-
-</section>
-
-<!-- add products section ends -->
 
 
 
 
 
-
-
-
-
-
-
-<!-- custom js file -->
-<script src="../js/admin_script.js"></script>
-    
 </body>
 </html>

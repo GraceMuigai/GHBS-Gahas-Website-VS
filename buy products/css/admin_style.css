@@ -540,6 +540,63 @@ section{
     text-decoration: double ; 
 }
 
+.booked-services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.booked-services .box-container .box{
+    background: ghostwhite;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+    padding-top: 1rem;
+}
+
+.booked-services .box-container .box p{
+    padding: 0.5rem 0;
+    line-height: 2;
+    font-size: 1.8rem;
+    color: #131212;
+}
+
+.booked-services .box-container .box p span{
+    color: rgb(196, 85, 183);
+    text-decoration: double ; 
+}
+
+.messages .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.messages .box-container .box{
+    background: ghostwhite;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+    padding-top: 1rem;
+}
+
+.messages .box-container .box p{
+    padding: 0.5rem 0;
+    line-height: 2;
+    font-size: 1.8rem;
+    color: #131212;
+}
+
+.messages .box-container .box p span{
+    color: rgb(196, 85, 183);
+    text-decoration: double ; 
+}
 
 
 

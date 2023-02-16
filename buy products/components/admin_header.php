@@ -23,7 +23,7 @@
             <a href="../admin/admin_accounts.php">admin</a>
             <a href="../admin/user_accounts.php">users</a>
             <a href="../admin/messages.php">messages</a>
-            <a href="../../book_form.php">Bookings</a>
+            <a href="../admin/booked_services.php">Bookings</a>
         </nav>
 
         <div class="icons">

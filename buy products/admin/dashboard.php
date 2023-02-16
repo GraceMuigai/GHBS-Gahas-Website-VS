@@ -113,7 +113,7 @@ if(!isset($admin_id)){
             ?>
             <h3><?= $numbers_of_users; ?></h3>
             <p>user accounts</p>
-            <a href="user_accounts" class="btn">see users</a>
+            <a href="user_accounts.php" class="btn">see users</a>
         </div>
 
         <div class="box">
@@ -146,7 +146,7 @@ if(!isset($admin_id)){
             ?>
             <h3><?= $numbers_of_bookings; ?></h3>
             <p>bookings</p>
-            <a href="../../book_form.php" class="btn">see bookings</a>
+            <a href="booked_services.php" class="btn">see bookings</a>
         </div>
 
     </div>
