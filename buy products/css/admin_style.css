@@ -470,6 +470,75 @@ section{
     color: black;
 }
 
+.placed-orders .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.placed-orders .box-container .box{
+    background: ghostwhite;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+    padding-top: 1rem;
+}
+
+.placed-orders .box-container .box p{
+    padding: 0.5rem 0;
+    line-height: 2;
+    font-size: 1.8rem;
+    color: #131212;
+}
+
+.placed-orders .box-container .box p span{
+    color: rgb(196, 85, 183);
+    text-decoration: double ; 
+}
+
+.placed-orders .box-container .box .drop-down{
+    border: var(--border);
+    border-radius: 0.5rem;
+    width: 100%;
+    margin: 1rem 0;
+    background: var(--bg);
+    padding: 1rem 1.4rem;
+    font-size: 2rem;
+    color: var(--light-coral);
+}
+
+.accounts .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.accounts .box-container .box{
+    background: ghostwhite;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.accounts .box-container .box p{
+    padding: 0.5rem 0;
+    line-height: 2;
+    font-size: 1.8rem;
+    color: #131212;
+}
+
+.accounts .box-container .box p span{
+    color: rgb(196, 85, 183);
+    text-decoration: double ; 
+}
 
 
 
@@ -562,6 +631,14 @@ section{
     }
 
     .show-products .box-container{
+        grid-template-columns: 1fr;
+    }
+
+    .placed-orders .box-container{
+        grid-template-columns: 1fr;
+    }
+
+    .accounts .box-container{
         grid-template-columns: 1fr;
     }
 }

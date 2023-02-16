@@ -10,6 +10,14 @@ if(!isset($admin_id)){
     header('location:admin_login.php');
 }
 
+if(isset($_GET['delete'])){
+
+    $delete_id = $_GET['delete'];
+    $delete_admin = $conn->prepare("DELETE FROM `admins` WHERE id = ?");
+    $delete_admin->execute([$delete_id]);
+    header('location:admin_accounts.php');
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +47,53 @@ if(!isset($admin_id)){
 
 </head>
 <body>
+
+<?php include '../components/admin_header.php' ?>
+
+<!-- admins account section starts -->
+
+<section class="accounts">
+
+    <h1 class="heading">admins accounts</h1>
+
+    <div class="box-container">
+
+
+        <div class="box">
+            <p>register new admin</p>
+            <a href="register_admin.php" class="option-btn">register</a>
+        </div>
+
+        <?php
+            $select_accounts = $conn->prepare("SELECT * FROM `admins`");
+            $select_accounts->execute();
+            if($select_accounts->rowCount() > 0){
+                while($fetch_accounts = $select_accounts->fetch(PDO::FETCH_ASSOC)){
+      
+        ?>
+        <div class="box">
+            <p> admin id : <span><?= $fetch_accounts['id']; ?></span></p>
+            <p> username : <span><?= $fetch_accounts['name']; ?></span></p>
+            <div class="flex-btn">
+            <a href="admin_accounts.php?delete=<?= $fetch_accounts['id']; ?>" class="delete-btn" onclick= "return confirm('delete this account?');">delete</a>
+            <?php
+                if($fetch_accounts['id'] == $admin_id){
+                    echo '<a href="update_profile.php" class="option-btn">update</a>';
+                }
+            ?>
+            </div>
+        </div>
+
+        <?php
+                }
+            }else{
+                echo '<p class="empty">no available accounts!</p>';
+            }
+        ?>
+    </div>
+</section>
+
+<!-- admins account section ends -->
 
 
 
