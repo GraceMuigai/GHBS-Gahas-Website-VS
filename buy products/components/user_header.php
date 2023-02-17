@@ -14,17 +14,17 @@
 <header class="header">
 
     <section class="flex">
-        <a href="../site_products.php" class="logo"><span>G</span>ahas <span>B</span>raiding <span>C</span>reativity</a>
+        <a href="../home.php" class="logo"><span>G</span>ahas <span>B</span>raiding <span>C</span>reativity</a>
 
         <nav class="navbar">
-            <a href="../../home.php">home</a>
-            <a href="../../services.php">services</a>
-            <a href="../../products.php">products</a>
-            <a href="../../about.php">about</a>
-            <a href="../../book.php">book</a>
-            <a href="../orders.php">orders</a>
-            <a href="../shop.php">shop</a>
-            <a href="../contact.php">contact</a>
+            <a href="../home.php">home</a>
+            <a href="../services.php">services</a>
+            <a href="../products_home.php">products</a>
+            <a href="../about.php">about</a>
+            <a href="../book.php">book</a>
+            <a href="orders.php">orders</a>
+            <a href="shop.php">shop</a>
+            <a href="contact.php">contact</a>
         </nav>
 
         <div class="icons">
@@ -38,9 +38,9 @@
                 $total_cart_items = $count_cart_items->rowCount();
             ?>
             <div id="menu-btn" class="fas fa-bars"></div>
-            <a href="search_page.php"><i class="fas fa-search"></i></a>
-            <a href="favourites.php"><i class="fas fa-heart"></i><span>(<?= $total_favourite_items; ?>)</span></a>
-            <a href="cart.php"><i class="fas fa-shopping-cart"></i><span>(<?= $total_cart_items; ?>)</span></a>
+            <a href="buy products/search_page.php"><i class="fas fa-search"></i></a>
+            <a href="buy products/favourites.php"><i class="fas fa-heart"></i><span>(<?= $total_favourite_items; ?>)</span></a>
+            <a href="buy products/cart.php"><i class="fas fa-shopping-cart"></i><span>(<?= $total_cart_items; ?>)</span></a>
             <div id="user-btn" class="fas fa-user"></div>
         </div>
 

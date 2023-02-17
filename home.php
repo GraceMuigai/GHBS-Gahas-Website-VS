@@ -31,7 +31,7 @@
         <nav class="navbar">
             <a href="home.php">Home</a>
             <a href="services.php">Services</a>
-            <a href="products_home.php">Products</a>
+            <a href="../GHBS Gahas Website VS/buy products/site_products.php">Products</a>
             <a href="about.php">About</a>
             <a href="book.php">Book</a>
         </nav>
@@ -82,7 +82,7 @@
                     <div class="content">
                         <span>explore, hair care, consultation</span>
                         <h3>Proud of Your Hair</h3>
-                        <a href="products_home.php" class="btn">Shop Products</a>
+                        <a href="../GHBS Gahas Website VS/buy products/site_products.php" class="btn">Shop Products</a>
                     </div>
                 </div>
 
@@ -228,7 +228,7 @@
                 <h3>Quick Links</h3>
                 <a href="home.php"> <i class="fas fa-angle-right"></i> Home</a>
                 <a href="services.php"> <i class="fas fa-angle-right"></i> Services</a>
-                <a href="products_home.php"> <i class="fas fa-angle-right"></i> Products</a>
+                <a href="../GHBS Gahas Website VS/buy products/site_products.php"> <i class="fas fa-angle-right"></i> Products</a>
                 <a href="about.php"> <i class="fas fa-angle-right"></i> About</a>
                 <a href="book.php"> <i class="fas fa-angle-right"></i> Book</a>
             </div>
