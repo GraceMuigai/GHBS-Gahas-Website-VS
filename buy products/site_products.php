@@ -33,7 +33,7 @@ if(isset($_SESSION['user_id'])){
     <link href="https://fonts.googleapis.com/css2?family=Andika:ital@0;1&family=Lato:ital@0;1&family=Roboto:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
 
     <!-- custom css file -->
-    <link rel="stylesheet" href="../css/product_style.css">
+    <link rel="stylesheet" href="../buy products/css/product_style.css">
     
 
 
@@ -41,6 +41,24 @@ if(isset($_SESSION['user_id'])){
 <body>
 <?php include 'components/user_header.php'?>
 
+    <!-- site products section starts-->
+
+    <div class="site-products-bg">
+
+        <section class="site-products">
+
+            <div class="w">
+
+                <div class="slide">
+                    <div class="image"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!-- site products section ends-->
 
 
 
@@ -65,12 +83,11 @@ if(isset($_SESSION['user_id'])){
 
 
 
-
-
+<?php include 'components/footer.php';?>
 
 
 <!-- custom js file -->
-<script src="../js/product_script.js"></script>
+<script src="../buy products/js/product_script.js"></script>
 
 </body>
 </html>

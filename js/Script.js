@@ -19,6 +19,31 @@ var swiper = new Swiper(".home-slider", {
     },
 });
 
+var swiper = new Swiper(".category-slider", {
+  loop:true,
+  autoHeight:true,
+  grabCusor:true,
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: { 
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+  },
+});
+
 var swiper = new Swiper(".reviews-slider", {
     loop:true,
     autoHeight:true,

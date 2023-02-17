@@ -19,7 +19,7 @@
         <nav class="navbar">
             <a href="../home.php">home</a>
             <a href="../services.php">services</a>
-            <a href="../products_home.php">products</a>
+            <a href="site_products.php">products</a>
             <a href="../about.php">about</a>
             <a href="../book.php">book</a>
             <a href="orders.php">orders</a>
@@ -38,9 +38,9 @@
                 $total_cart_items = $count_cart_items->rowCount();
             ?>
             <div id="menu-btn" class="fas fa-bars"></div>
-            <a href="buy products/search_page.php"><i class="fas fa-search"></i></a>
-            <a href="buy products/favourites.php"><i class="fas fa-heart"></i><span>(<?= $total_favourite_items; ?>)</span></a>
-            <a href="buy products/cart.php"><i class="fas fa-shopping-cart"></i><span>(<?= $total_cart_items; ?>)</span></a>
+            <a href="search_page.php"><i class="fas fa-search"></i></a>
+            <a href="favourites.php"><i class="fas fa-heart"></i><span>(<?= $total_favourite_items; ?>)</span></a>
+            <a href="cart.php"><i class="fas fa-shopping-cart"></i><span>(<?= $total_cart_items; ?>)</span></a>
             <div id="user-btn" class="fas fa-user"></div>
         </div>
 

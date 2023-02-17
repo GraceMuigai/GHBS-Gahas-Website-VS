@@ -232,6 +232,37 @@ section{
     padding-top: 1rem;
 }
 
+.home-category .slide{
+    text-align: center;
+    border: var(--border);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    display: inline-block;
+    background: ghostwhite;
+}
+
+.home-category .slide img{
+    height: 8rem;
+    width: 8rem;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.home-category .slide h3{
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    color: #131212;
+}
+
+.home-category .slide:hover{
+    background: var(--dark-color);
+}
+
+.home-category .slide:hover h3{
+    color: beige;
+}
+
 .home-about{
     display: flex;
     align-items: center;
@@ -314,7 +345,6 @@ section{
     text-align: center;
     margin-top: 2rem;
 }
-
 
 .about{
     display: flex;
