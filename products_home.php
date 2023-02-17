@@ -23,7 +23,7 @@
 
 </head>
 <body>
-<a href="../GHBS Gahas Website VS/buy products/site_products.php"></a>
+<?php include '../GHBS Gahas Website VS/buy products/site_products.php'; ?>
 
     
 </body>
