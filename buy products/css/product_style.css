@@ -251,6 +251,127 @@ section{
     display: none;
 }
 
+.site-products .slide{
+    background: ghostwhite;
+    border: var(--border);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;;
+}
+
+.site-products .slide .fa-eye,
+.site-products .slide .fa-heart{
+    position: absolute;
+    top: 1rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.3rem;
+    font-size: 2rem;
+    color: #131212;
+    border: var(--border);
+    border-radius: 0.5rem;
+    background: ghostwhite;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.site-products .slide .fa-eye{
+    left: -10rem;
+}
+
+.site-products .slide .fa-heart{
+    right: -10rem;
+}
+
+.site-products .slide .fa-eye:hover{
+    background: var(--black);
+    color: gold;
+}
+
+.site-products .slide .fa-heart:hover{
+    background: white;
+    color: rgb(143, 17, 17);
+}
+
+.site-products .slide:hover .fa-eye{
+    left: 1rem;
+}
+
+.site-products .slide:hover .fa-heart{
+    right: 1rem;
+}
+
+.site-products .slide .image{
+    height: 20rem;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.site-products .slide .name{
+    font-size: 2rem;
+    color: #131212;
+}
+
+.site-products .slide .flex{
+    display: flex;
+    margin: 1rem 0;
+    align-items: center;
+}
+
+.site-products .slide .flex .price{
+    font-size: 2rem;
+    color: var(--black);
+    margin-right: auto;
+}
+
+.site-products .slide .flex .qty{
+    font-size: 1.8rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    padding: 1.2rem 1.4rem;
+    color: black;
+    background: var(--bg);
+    width: 8rem;
+}
+
+.form-container form{
+    max-width: 50rem;
+    margin: 0 auto;
+    border: var(--border);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    background: whitesmoke;
+    box-shadow: var(--box-shadow);
+}
+
+.form-container form h3{
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.form-container form .box{
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    color: var(--black);
+    padding: 1.4rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+}
+
+.form-container form p{
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    margin-top: .5rem;
+    padding-top: 1rem;
+}
+
 
 
 

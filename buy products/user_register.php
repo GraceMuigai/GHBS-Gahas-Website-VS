@@ -10,6 +10,36 @@ if(isset($_SESSION['user_id'])){
     $user_id = '';
 }
 
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $name = filter_var($name, FILTER_SANITIZE_STRING);
+    $email = $_POST['email'];
+    $email = filter_var($email, FILTER_SANITIZE_STRING);
+    $password = $_POST['password'];
+    $password = filter_var($password, FILTER_SANITIZE_STRING);
+    $cpassword = $_POST['cpassword'];
+    $cpassword = filter_var($cpassword, FILTER_SANITIZE_STRING);
+
+    $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
+    $select_user->execute([$email]);
+    $row = $select_user->fetch(PDO::FETCH_ASSOC);
+
+    if($select_user->rowCount() > 0){
+        $message[] = 'user already exists!';
+    }else{
+
+        if($password !=$cpassword){
+            $message[] = 'confirm password not matched!';
+        }else{
+            $insert_user = $conn->prepare("INSERT INTO `users`(name, email, password) VALUES(?,?,?);");
+        $insert_user->execute([$name, $email, $cpassword,]);
+        $message[] = 'Successfully Registered Now Login!';
+        }
+
+        
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +70,29 @@ if(isset($_SESSION['user_id'])){
 </head>
 <body>
 <?php include 'components/user_header.php'?>
+
+<!-- userregister section starts -->
+
+<section class="form-container">
+
+    <form action="" method="POST">
+        <h3>Register Now</h3>
+        <input type="text" required maxlength="20" name="name" placeholder="enter you name" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+        <input type="email" required maxlength="50" name="email" placeholder="enter you email" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+        <input type="password" required maxlength="20" name="password" placeholder="enter your password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+        <input type="password" required maxlength="20" name="cpassword" placeholder="confirm password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+        <input type="submit" value="register now" class="btn" name="submit">
+        <p>already have an account?</p>
+        <a href="user_login.php" class="option-btn">Login Now</a>
+    </form>
+</section>
+
+
+
+
+<!-- user register section ends -->
+
+
 
 
 

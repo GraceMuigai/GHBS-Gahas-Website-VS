@@ -53,21 +53,21 @@
                 
             ?>
             <P><?= $fetch_profile['name']; ?></P> 
-            <a href="../admin/update_profile.php" class="btn">update profile</a>
+            <a href="update_user.php" class="btn">update profile</a>
             <div class="flex-btn">
-                <a href="../admin/admin_login.php" class="option-btn">login</a>
-                <a href="../admin/register_admin.php" class="option-btn">register</a>
+                <a href="user_login.php" class="option-btn">login</a>
+                <a href="user_register.php" class="option-btn">register</a>
             </div>
-            <a href="../components/admin_logout.php" onclick="return confirm('logout from this website?');" class="delete-btn">logout</a>
+            <a href="../buy products/components/user_logout.php" onclick="return confirm('logout from this website?');" class="delete-btn">logout</a>
             <?php
                 }else{
 
                 
             ?>
-            <p>Please login!</p>
+            <p>Please login or Register!</p>
             <div class="flex-btn">
-                <a href="../admin/admin_login.php" class="option-btn">login</a>
-                <a href="../admin/register_admin.php" class="option-btn">register</a>
+                <a href="user_login.php" class="option-btn">login</a>
+                <a href="user_register.php" class="option-btn">register</a>
             </div>
             <?php
                 }
