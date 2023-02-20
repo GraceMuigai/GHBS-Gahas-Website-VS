@@ -41,3 +41,13 @@ var swiper = new Swiper(".products-slider", {
       },
     },
   });
+
+subImages = document.querySelectorAll('.quick-view .box .image-container .sub-images img');
+mainImage = document.querySelector('.quick-view .box .image-container .main-image img');
+  
+subImages.forEach(images =>{
+    images.onclick = () =>{
+        let src = images.getAttribute('src');
+        mainImage.src = src;
+    }
+});  

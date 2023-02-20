@@ -140,37 +140,37 @@
         <div class="swiper category-slider">
             <div class="swiper-wrapper">
 
-                <a href="../buy products/category.php?category=soft-kinky" class="swiper-slide slide">
+                <a href="buy products/category.php?category=kinky" class="swiper-slide slide">
                     <img src="images/icon-wavy.png" alt="">
-                    <h3>soft kinky</h3>
+                    <h3>kinky</h3>
                 </a>
 
-                <a href="../buy products/category.php?category=locs" class="swiper-slide slide">
+                <a href="buy products/category.php?category=locs" class="swiper-slide slide">
                     <img src="images/icon-1.png" alt="">
                     <h3>locs</h3>
                 </a>
 
-                <a href="../buy products/category.php?category=braids" class="swiper-slide slide">
+                <a href="buy products/category.php?category=braids" class="swiper-slide slide">
                     <img src="images/icon-wavy.png" alt="">
                     <h3>sell hair products</h3>
                 </a>
 
-                <a href="../buy products/category.php?category=hair-bands" class="swiper-slide slide">
+                <a href="buy products/category.php?category=hair-bands" class="swiper-slide slide">
                     <img src="images/icon-wavy.png" alt="">
                     <h3>sell hair products</h3>
                 </a>
 
-                <a href="../buy products/category.php?category=aloe-vera" class="swiper-slide slide">
+                <a href="buy products/category.php?category=aloe-vera" class="swiper-slide slide">
                     <img src="images/icon-wavy.png" alt="">
                     <h3>aloe vera</h3>
                 </a>
 
-                <a href="../buy products/category.php?category=coconut-oil" class="swiper-slide slide">
+                <a href="buy products/category.php?category=coconut-oil" class="swiper-slide slide">
                     <img src="images/icon-wavy.png" alt="">
                     <h3>coconut oil</h3>
                 </a>
 
-                <a href="../buy products/category.php?category=fluffy-twist" class="swiper-slide slide">
+                <a href="buy products/category.php?category=fluffy-twist" class="swiper-slide slide">
                     <img src="images/icon-wavy.png" alt="">
                     <h3>fluffy twist</h3>
                 </a>

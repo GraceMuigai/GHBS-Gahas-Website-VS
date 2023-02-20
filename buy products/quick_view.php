@@ -10,6 +10,8 @@ if(isset($_SESSION['user_id'])){
     $user_id = '';
 }
 
+include 'components/favourites_cart.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +42,64 @@ if(isset($_SESSION['user_id'])){
 </head>
 <body>
 <?php include 'components/user_header.php'?>
+
+<!-- quick view section starts -->
+
+<section class="quick-view">
+
+    <h1 class="heading">Quick View</h1>
+
+    <?php
+        $pid = $_GET['pid'];
+        $select_products = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
+        $select_products->execute([$pid]);
+        if($select_products->rowCount() > 0){
+            while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
+    ?>
+
+            <form action="" method="post" class="box">
+                <input type="hidden" name="pid" value="<?= $fetch_products['id']; ?>">
+                <input type="hidden" name="name" value="<?= $fetch_products['name']; ?>">
+                <input type="hidden" name="price" value="<?= $fetch_products['price']; ?>">
+                <input type="hidden" name="image" value="<?= $fetch_products['image_01']; ?>">
+                
+                <div class="image-container">
+                    <div class="main-image">
+                        <img src="hair_products_img/<?= $fetch_products['image_01']; ?>" alt="">
+                    </div>
+                    <div class="sub-images">
+                        <img src="hair_products_img/<?= $fetch_products['image_01']; ?>" alt="">
+                        <img src="hair_products_img/<?= $fetch_products['image_02']; ?>" alt="">
+                        <img src="hair_products_img/<?= $fetch_products['image_03']; ?>" alt="">
+                    </div>
+                </div>
+                
+                <div class="content">
+                    <div class="name"><?= $fetch_products['name']; ?></div>
+                    <div class="flex">
+                        <div class="price">Ksh<span><?= $fetch_products['price']; ?></span>/=</div>
+                                <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if(this.value.length == 2) return false;">
+                    </div>
+                    <div class="details"><?= $fetch_products['details']; ?></div>
+                    <div class="flex-btn">
+                        <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+                        <input type="submit" value="add to favourites" name="add_to_favourites" class="option-btn">
+                    </div>
+                </div>
+            </form>
+
+                
+
+    <?php
+            }
+        }else{
+            echo '<p class="empty">no products found yet!</p>';
+        }
+    ?>
+</section>
+
+
+<!-- quick view section ends -->
 
 
 

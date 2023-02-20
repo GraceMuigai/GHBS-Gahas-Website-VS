@@ -372,6 +372,181 @@ section{
     padding-top: 1rem;
 }
 
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.products .box-container .box{
+    background: ghostwhite;
+    border: var(--border);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;;
+}
+
+.products .box-container .box .fa-eye,
+.products .box-container .box .fa-heart{
+    position: absolute;
+    top: 1rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.3rem;
+    font-size: 2rem;
+    color: #131212;
+    border: var(--border);
+    border-radius: 0.5rem;
+    background: ghostwhite;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.products .box-container .box .fa-eye{
+    left: -10rem;
+}
+
+.products .box-container .box .fa-heart{
+    right: -10rem;
+}
+
+.products .box-container .box .fa-eye:hover{
+    background: var(--black);
+    color: gold;
+}
+
+.products .box-container .box .fa-heart:hover{
+    background: white;
+    color: rgb(143, 17, 17);
+}
+
+.products .box-container .box:hover .fa-eye{
+    left: 1rem;
+}
+
+.products .box-container .box:hover .fa-heart{
+    right: 1rem;
+}
+
+.products .box-container .box .image{
+    height: 20rem;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.products .box-container .box .name{
+    font-size: 2rem;
+    color: #131212;
+}
+
+.products .box-container .box .flex{
+    display: flex;
+    margin: 1rem 0;
+    align-items: center;
+}
+
+.products .box-container .box .flex .price{
+    font-size: 2rem;
+    color: var(--black);
+    margin-right: auto;
+}
+
+.products .box-container .box .flex .qty{
+    font-size: 1.8rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    padding: 1.2rem 1.4rem;
+    color: black;
+    background: var(--bg);
+    width: 8rem;
+}
+
+.quick-view .box{
+    background: ghostwhite;
+    border: var(--border);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.quick-view .box .image-container{
+    flex: 1 1 40rem;
+}
+
+.quick-view .box .content{
+    flex: 1 1 40rem;
+}
+
+.quick-view .box .image-container .main-image img{
+    height: 20rem;
+    width: 100%;
+    object-fit: contain;
+}
+
+.quick-view .box .image-container .sub-images{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.quick-view .box .image-container .sub-images img{
+    height: 7rem;
+    width: 10rem;
+    border: var(--border);
+    cursor: pointer;
+    transition: .2s linear;
+    object-fit: contain;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.quick-view .box .image-container .sub-images img:hover{
+    transform: scale(1.1);
+}
+
+.quick-view .box .content .name{
+    font-size: 2rem;
+    color: #131212;
+}
+
+.quick-view .box .flex{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.quick-view .box .flex .price{
+    font-size: 1.7rem;
+    color: #131212;
+    text-decoration:underline;
+}
+
+.quick-view .box .flex .qty{
+    padding: 1.2rem 1.5rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.quick-view .box .details{
+    font-size: 1.4rem;
+    font: optional;
+    color: #131212;
+    line-height: 2;
+}
 
 
 
@@ -515,5 +690,14 @@ section{
 
     .heading{
         font-size: 2rem;
+    }
+
+    .products .box-container{
+        grid-template-columns: 1fr;
+    }
+
+    .quick-view .box .image-container .sub-images img{
+        width: 7rem;
+        height: 5rem;
     }
 }

@@ -77,6 +77,7 @@
                     <span>24/7 booking</span>
                 </div>
             </div>
+        <a href="../GHBS Gahas Website VS/buy products/contact.php" class="btn">Contact Us</a>
         </div>
 
     </section>
@@ -144,7 +145,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        <i class="fa fa-star-half-full"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     </div>
                     <p> Gahas Braiding is one of the best salon I've ever attended. Great sevices they have.</p>
                     <h3>Mary Nyokabi</h3>
