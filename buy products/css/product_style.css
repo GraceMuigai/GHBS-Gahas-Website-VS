@@ -365,6 +365,11 @@ section{
     border-radius: 0.5rem;
 }
 
+.form-container textarea{
+    height: 20rem;
+    resize: none;
+}
+
 .form-container form p{
     font-size: 1.3rem;
     color: var(--dark-blue);
@@ -548,6 +553,35 @@ section{
     line-height: 2;
 }
 
+.search-form form{
+    display: flex;
+    gap: 1rem;
+}
+
+.search-form form .box{
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    color: var(--black);
+    border: var(--dark-blue);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    background: ghostwhite;
+    width: 100%;
+}
+
+.search-form form .fa-search{
+    font-size: 2rem;
+    width: 5rem;
+    background: var(--light-coral);
+    color: black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.search-form form .fa-search:hover{
+    background-color: var(--dark-blue);
+    color: var(--light-coral);
+}
 
 
 
