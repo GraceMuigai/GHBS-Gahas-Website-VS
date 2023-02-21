@@ -170,9 +170,9 @@
                     <h3>coconut oil</h3>
                 </a>
 
-                <a href="buy products/category.php?category=fluffy-twist" class="swiper-slide slide">
+                <a href="buy products/category.php?category=twist" class="swiper-slide slide">
                     <img src="images/icon-wavy.png" alt="">
-                    <h3>fluffy twist</h3>
+                    <h3>Twist Braids</h3>
                 </a>
             </div>
 
