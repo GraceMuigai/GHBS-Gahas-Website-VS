@@ -154,6 +154,12 @@ section{
     color: #131212;
 }
 
+.disabled{
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 .empty{
     border: var(--border);
     border-radius: 0.5rem;
@@ -470,6 +476,52 @@ section{
     color: black;
     background: var(--bg);
     width: 8rem;
+}
+
+.products .box-container .box .flex .fa-edit{
+    width: 5rem;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    background: ghostwhite;
+}
+
+.products .box-container .box .flex .fa-edit:hover{
+    color: rgb(0, 136, 255);
+}
+
+.products .box-container .box .sub-total{
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: rgb(179, 0, 255);
+}
+
+.products .box-container .box .sub-total span{
+    color: rgb(143, 17, 17);
+}
+
+.products .grand-total{
+    background: ghostwhite;
+    margin: 0 auto;
+    margin-top: 2rem;
+    max-width: 50rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    box-shadow: var(--light-coral);
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .grand-total p{
+    font-size: 2rem;
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+}
+
+.products .grand-total p span{
+    color: rgb(143, 17, 17);
+    font-size: 2.5rem;
 }
 
 .quick-view .box{
