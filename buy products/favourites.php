@@ -8,8 +8,10 @@ if(isset($_SESSION['user_id'])){
     $user_id = $_SESSION['user_id'];
 }else{
     $user_id = '';
-    header('location:site_products.php');
+    header('location:user_login.php');
 }
+
+include 'components/favourites_cart.php';
 
 ?>
 
@@ -41,6 +43,46 @@ if(isset($_SESSION['user_id'])){
 </head>
 <body>
 <?php include 'components/user_header.php'?>
+
+<!-- favourites section starts -->
+
+<section class="products">
+
+    <h1 class="heading">your favourites</h1>
+
+    <div class="box-container">
+
+        <?php
+            $select_favourites = $conn->prepare("SELECT * FROM `favourites` WHERE user_id = ?");
+            $select_favourites->execute([$user_id]);
+            if($select_favourites->rowCount() > 0){
+                while($fetch_favourites = $select_favourites->fetch(PDO::FETCH_ASSOC)){
+  
+        ?>
+
+        <form action="" method="post" class="box">
+            <input type="hidden" name="">
+            <a href="quick_view.php?pid=<?= $fetch_favourites['pid']; ?>" class="fas fa-eye"></a>
+            <img src="hair_products_img/<?= $fetch_favourites['image']; ?>" class="image" alt="">
+            <div class="name"><?= $fetch_favourites['name']; ?></div>
+            <div class="flex">
+                <div class="price">Ksh<span><?= $fetch_favourites['price']; ?></span>/=</div>
+                <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if(this.value.length == 2) return false;">
+            </div>
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+                <input type="submit" value="delete item" onclick="return confirm('delete this product from favourites?');" name="delete" class="delete-btn">
+        </form>
+
+        <?php
+                }
+            }else{
+                echo '<p class="empty">your favourites is empty</p>';
+            }
+        ?>
+    </div>
+</section>
+
+<!-- favourites section ends -->
 
 
 
