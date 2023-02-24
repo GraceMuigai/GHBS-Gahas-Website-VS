@@ -1,5 +1,5 @@
 <?php
-    $connection = mysqli_connect('localhost','root','','book_db');
+    $conn = mysqli_connect('localhost','root','','shop_db');
 
     if(isset($_POST['submitted'])){
         $name = $_POST['name'];
@@ -12,7 +12,7 @@
         $_REQUEST = " insert into book_form(name, email, phone, service, length, arrival) 
         value('$name', '$email', '$phone', '$service', '$length', '$arrival')"; 
 
-        mysqli_query($connection, $_REQUEST);
+        mysqli_query($conn, $_REQUEST);
 
         header('location:book.php');
 

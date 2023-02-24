@@ -635,6 +635,97 @@ section{
     color: var(--light-coral);
 }
 
+.checkout .display-orders{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.checkout .display-orders p{
+    padding: 1rem 3rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    font-size: 2rem;
+    color: #131212;
+    background: ghostwhite;
+    text-align: center;
+}
+
+.checkout .display-orders p span{
+    color: rgb(0, 136, 255);
+}
+
+.checkout .display-orders .grand-total{
+    width: 100%;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.checkout .display-orders .grand-total span{
+    color: rgb(158, 21, 21);
+}
+
+.checkout form{
+    border: var(--border);
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 2rem;
+    color: #131212;
+    background: ghostwhite;
+}
+
+.checkout form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.checkout form .flex .inputBox{
+    flex: 1 1 40rem;
+}
+
+.checkout form .flex .inputBox span{
+    font-size: 1.5rem;
+    color: #131212;
+}
+
+.checkout form .flex .inputBox .box{
+    width: 100%;
+    border: var(--border);
+    background: white;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.6rem;
+    color: var(--black);
+}
+
+.show-orders .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.show-orders .box-container .box{
+    background: ghostwhite;
+    border: var(--border);
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    box-shadow: var(--box-shadow);
+    flex: 1 1 40rem;
+}
+
+.show-orders .box-container .box p{
+    margin: 1rem 0;
+    font-size: 2rem;
+    color: #131212;
+    line-height: 1.5;
+}
+
+.show-orders .box-container .box p span{
+    color: rgb(179, 0, 255);
+}
 
 
 

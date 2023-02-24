@@ -1,5 +1,6 @@
 <?php
-include '../../book_form.php';
+// include '../../book_form.php';
+include '../components/connect.php';
 
 session_start(); 
 
@@ -12,7 +13,7 @@ if(!isset($admin_id)){
 if(isset($_GET['delete'])){
 
     $delete_id = $_GET['delete'];
-    $delete_booking = $connection->prepare("DELETE FROM `book_form` WHERE id = ?");
+    $delete_booking = $conn->prepare("DELETE FROM `book_form` WHERE id = ?");
     $delete_booking->execute([$delete_id]);
     header('location:booked_services.php');
 }
@@ -59,7 +60,7 @@ if(isset($_GET['delete'])){
 
 
         <?php
-            $select_booked_services = $connection->prepare("SELECT * FROM `book_form`");
+            $select_booked_services = $conn->prepare("SELECT * FROM `book_form`");
             $select_booked_services->execute();
             if($select_booked_services->rowCount() > 0){
                 while($fetch_booked_services = $select_booked_services->fetch(PDO::FETCH_ASSOC)){
