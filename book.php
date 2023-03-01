@@ -85,7 +85,7 @@
                 </div>
             </div>
 
-            <input type="submit" value="submit" class="btn" name="submitted">
+            <input type="submit" value="submit" class="btn" name="submitted" onclick="return confirm('Accept Terms & Conditions: Cancel Appointment 72 hours before the appointment.');">
         </form>
     </section>
     
